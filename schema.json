@@ -56,7 +56,7 @@
     },
     "content": {
       "type": "string",
-      "pattern": "^([a-zA-Z0-9-_.]+\\.(md|html|txt))$",
+      "pattern": "^([a-zA-Z0-9-_.]+\\.(md|html))$",
       "description": "The path to the content file for the page. This file should be located in the repository and contain the content of the page in Markdown or HTML format.",
       "examples": [
         "page.md",
