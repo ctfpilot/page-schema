@@ -1,7 +1,7 @@
 # CTF Pilot's Page Schema
 
 This schema defines the structure for describing static pages used by the platform (for example docs, information pages, or static site pages).  
-It is a human-friendly reference of the JSON Schema in `page/schema.json` and includes examples for YAML and JSON files.
+It is a human-friendly reference of the JSON Schema in `schema.json` and includes examples for YAML and JSON files.
 
 ## Quick reference — required fields
 
