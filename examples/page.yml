@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/ctfpilot/page-schema/refs/heads/main/schema.json
+
+enabled: true
+slug: "demo-page"
+title: "Demo Page"
+route: "/demo-page"
+content: "page.md"
+format: "markdown"
