@@ -5,13 +5,13 @@ It is a human-friendly reference of the JSON Schema in `schema.json` and include
 
 ## Quick reference — required fields
 
-At minimum a page object SHOULD include the following properties (the schema lists them as required):
+At minimum a page object MUST include the following properties (these are required by the schema):
 
 - `enabled` (boolean) — whether the page is enabled. Default: `true`.
 - `slug` (string) — machine-friendly slug. Must match `^[a-z0-9-]+$`.
 - `title` (string) — human-friendly title of the page.
 - `route` (string) — route used for navigation (e.g. `/example-page`).
-- `content` (string) — path to the content file for the page (must end with `.md`, `.html`, or `.txt`). Default: `page.md`.
+- `content` (string) — path to the content file for the page (must end with `.md` or `.html`). Default: `page.md`.
 - `format` (string) — either `markdown` or `html` (controls rendering). Default: `markdown`.
 
 ## Field constraints and allowed values
@@ -23,7 +23,7 @@ This section lists the main validation constraints defined in the schema.
 - `slug`: string matching regex `^[a-z0-9-]+$`. Min length 1, max length 50.
 - `title`: string. Min length 1, max length 100.
 - `route`: string. Min length 1, max length 100. Typically starts with a slash, e.g. `/demo`.
-- `content`: string matching the pattern `^([a-zA-Z0-9-_.]+\.(md|html|txt))$`. This must point to a file in the repository such as `page.md` or `README.md`. Default `page.md`. Min length 1, max length 255.
+- `content`: string matching the pattern `^([a-zA-Z0-9-_.]+\.(md|html))$`. This must point to a file in the repository such as `page.md` or `README.md`. Default `page.md`. Min length 1, max length 255.
 - `auth`: boolean. Default `false`. When `true` the page requires authentication to view.
 - `draft`: boolean. Default `false`. When `true` the page is a draft and not ready for public viewing.
 - `format`: enum with values: `markdown`, `html`. Default `markdown`.
@@ -43,7 +43,7 @@ This section lists the main validation constraints defined in the schema.
   - Description: Web route for navigation. Example: `/example-page`.
 
 - `content` (string)
-  - Description: Path to the content file relative to the page directory. Must end with `.md`, `.html`, or `.txt`.
+  - Description: Path to the content file relative to the page directory. Must end with `.md` or `.html`.
   - Default: `page.md`.
 
 - `auth` (boolean)
