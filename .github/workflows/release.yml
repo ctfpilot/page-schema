@@ -8,10 +8,14 @@ on:
 
 jobs:
   release:
+    name: Release
+    uses: ctfpilot/ci/.github/workflows/release.yml@v1.5.1
     permissions:
       contents: write
       packages: write
       id-token: write
-    name: Release
-    if: github.repository == 'ctfpilot/page-schema'
-    uses: the0mikkel/ci/.github/workflows/semver-release-standalone.yml@v1.4.0
+    secrets:
+      RELEASE_GH_TOKEN: ${{ secrets.RELEASE_GH_TOKEN }}
+    with:
+      repository: ctfpilot/page-schema
+      ENVIRONMENT: Release
